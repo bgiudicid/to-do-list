@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import './App.css';
 //import api from '../src/api/tasks';
 import tasks from '../src/api/tasks';
+import './App.css'
 
 function App() {
 //retrieveTasks
@@ -33,12 +34,15 @@ useEffect(()=> {
 
   return (
     <>
-    <h1>TO-DO LIST</h1>
-    <form>
-      <input id="newTask"></input>
-      <button id='addTask' onClick={addTaskHandler}>ADD</button>
-      <ul id='taskList'></ul>
-    </form>
+    <header></header>
+    <div id='box1'>
+      <h1>TO-DO LIST</h1>
+      <form>
+        <input id="newTask"></input>
+        <button id='addTask' onClick={addTaskHandler}>Add</button>
+      </form>
+    </div>
+    <ul id='taskList'></ul>
     </>
   );
 }
