@@ -36,7 +36,8 @@ useEffect(()=> {
     <h1>TO-DO LIST</h1>
     <form>
       <input id="newTask"></input>
-      <button id='addTask' onClick={addTaskHandler}></button>
+      <button id='addTask' onClick={addTaskHandler}>ADD</button>
+      <ul id='taskList'></ul>
     </form>
     </>
   );
