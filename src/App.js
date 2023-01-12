@@ -4,6 +4,7 @@ import './App.css';
 //import tasks from '../src/api/tasks';
 import './App.css';
 import List from '../src/components/List';
+import AddTask from '../src/components/AddTask'
 
 function App() {
 //retrieveTasks
@@ -38,11 +39,7 @@ function App() {
     <div id='page-box'>
       <header></header>
       <div id='box1'>
-        <h1>TO-DO LIST</h1>
-        <form>
-          <input id="newTask"></input>
-          <button id='addTask' >Add</button>
-        </form>
+        <AddTask/>
       </div>
     </div>
     <div id='page-box2'>
