@@ -1,8 +1,32 @@
 @import '../App.css';
 
-.list {
+ul {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
     width: 18rem;
+
 }
+
+li{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+img#trash-icon {
+    color: #FF33AE;
+    height: 1rem;
+    width: auto; 
+    margin: 0.5rem;
+}
+
+img#pen-icon{
+    color: #FF33AE;
+    height: 1rem;
+    width: auto;
+    margin: 0.5rem;
+}
+

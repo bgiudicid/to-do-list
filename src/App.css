@@ -49,8 +49,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-content: center;
-  flex-wrap: wrap;
+  align-content: flex-start;
   background-color: white;
   width: 18rem;
   border-radius: 2px;
