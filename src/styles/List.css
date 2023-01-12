@@ -17,16 +17,24 @@ li{
 }
 
 img#trash-icon {
-    color: #FF33AE;
+ 
     height: 1rem;
     width: auto; 
-    margin: 0.5rem;
+
 }
 
 img#pen-icon{
-    color: #FF33AE;
     height: 1rem;
     width: auto;
-    margin: 0.5rem;
+
 }
 
+#delete-button {
+    background-color: white;
+    padding: 0.5rem; 
+}
+
+#modify-button {
+    background-color: white;
+    padding: 0.5rem; 
+}
