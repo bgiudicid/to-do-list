@@ -33,14 +33,15 @@ useEffect(()=> {
 },[]);
 
   return (
-    <>
-    <header></header>
-    <div id='box1'>
-      <h1>TO-DO LIST</h1>
-      <form>
-        <input id="newTask"></input>
-        <button id='addTask' onClick={addTaskHandler}>Add</button>
-      </form>
+    <><div id='page-box'>
+      <header></header>
+      <div id='box1'>
+        <h1>TO-DO LIST</h1>
+        <form>
+          <input id="newTask"></input>
+          <button id='addTask' onClick={addTaskHandler}>Add</button>
+        </form>
+      </div>
     </div>
     <ul id='taskList'></ul>
     </>
