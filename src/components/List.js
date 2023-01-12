@@ -59,7 +59,7 @@ function List() {
 
     const updateData = async (task) => {
         //console.log(isEdit)
-       // await editTask(task)
+        await editTask(task)
         await showTasks();
         isEdit = false;
         editID = 0;
