@@ -1,20 +1,25 @@
 {
   "tasks": [
     {
-      "task": "do the readMe",
-      "id": 8
-    },
-    {
-      "task": "add a button",
-      "id": 9
-    },
-    {
       "task": "walk the dog again",
       "id": 10
     },
     {
       "task": "do the dishes",
       "id": 11
+    },
+    {
+      "addTask": "",
+      "task": "treat yourself",
+      "id": 12
+    },
+    {
+      "task": "buy chocolate",
+      "id": 13
+    },
+    {
+      "task": "make dinner",
+      "id": 14
     }
   ]
 }

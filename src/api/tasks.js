@@ -19,4 +19,9 @@ async function deleteTask(id) {
     return response 
 }
 
-export {addTask, deleteTask, getTasks};
+async function editTask(task) {
+    const response = await axios.put(`http://localhost:3006/tasks`, task);
+    return response
+}
+
+export {addTask, deleteTask, getTasks, editTask};

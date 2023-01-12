@@ -14,6 +14,7 @@ li{
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+    text-align: start;
 }
 
 img#trash-icon {
@@ -37,4 +38,13 @@ img#pen-icon{
 #modify-button {
     background-color: white;
     padding: 0.5rem; 
+}
+
+input.no-outline {
+    border-color: transparent;
+}
+
+input:focus{
+  border-color: transparent;
+  border-bottom: 2px solid #FF33AE;
 }
