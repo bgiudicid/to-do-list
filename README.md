@@ -52,4 +52,3 @@ With a simple click we can read, add, amend and delete them.
  - [Readme template](https://readme.so/)
  - [Axios](https://github.com/axios/axios)
  - [Demo APIs with json-server](https://egghead.io/lessons/javascript-creating-demo-apis-with-json-server)   
- - 
