@@ -1,25 +1,24 @@
 {
   "tasks": [
     {
-      "task": "walk the dog again",
-      "id": 10
+      "id": 10,
+      "task": "run with the dog "
     },
     {
-      "task": "do the dishes",
-      "id": 11
+      "id": 11,
+      "task": "do the dishes"
     },
     {
-      "addTask": "",
-      "task": "treat yourself",
-      "id": 12
+      "id": 12,
+      "task": "treat yourself"
     },
     {
-      "task": "buy chocolate",
-      "id": 13
+      "id": 13,
+      "task": "buy dark chocolate"
     },
     {
-      "task": "make dinner",
-      "id": 14
+      "id": 14,
+      "task": "one fun thing every hour"
     }
   ]
 }

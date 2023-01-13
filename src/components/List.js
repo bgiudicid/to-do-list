@@ -8,6 +8,7 @@ import { addTask, deleteTask, getTasks, editTask } from "../api/tasks";
 const initialTask = {task:"", id:null};
 var isEdit = false;
 var editID = 0;
+var editString="";
 
 function List() {
     const [tasks,setTasks] = useState([]);
@@ -34,14 +35,15 @@ function List() {
     const handleSubmit = async (e) => {
       e.preventDefault();
       addTask(task);
-      //alert (`New task! ${task.task}`);
+      //console.log (`New task! ${task.task}`);
       await showTasks();
       setTask(initialTask);
     }
 
     const handleChange = (e) => {
       if (isEdit) {
-        console.log(e.target.value);
+        //console.log(e.target.value);
+        editString = e.target.value;
         setUpdateTask({
             ...updateTask,
             [e.target.name]: e.target.value
@@ -51,62 +53,51 @@ function List() {
         setTask({
         ...task,
         [e.target.name]: e.target.value
-      })
+        })
       }
-        
-
     }
 
-    const updateData = async (task) => {
-        //console.log(isEdit)
-        await editTask(task)
+    const updateData = async (id) => {
+        console.log(editString)
+        await editTask(id, editString)
         await showTasks();
         isEdit = false;
         editID = 0;
-         };
+    };
 
     const editData = async (id) => {
-        console.log(id)
+        //console.log(id)
         await showTasks();
         isEdit = true;
         editID= id;
-        };
+    };
 
   return (
-    
         <>
             <form onSubmit={handleSubmit}>
                 <input type="text" name="task" id="task" placeholder="Add a new task" value = {task.task} onChange={handleChange}> 
                </input>
                 <button type="submit">ADD</button>
             </form>
-             <ul>
-             
+            <ul>
             {
-             tasks.map((task,index) => (
-
+              tasks.map((task,index) => (
                 <li key={index}> 
-                {isEdit && editID === task.id ? (<>
-                    {/* <input type="text" name="task" id="task" placeholder="Add a new task" value = {task.task} onChange={handleChange}> </input> */}
-                    <input value={task.task} onChange={handleChange}></input>
-                    <button onClick={() => updateData(task.task)}>SAVE</button>
-                {/* <button id="delete-button"  onClick={() => deleteData(tasks.id)}><img src= {trash} id='trash-icon' alt='trash icon'/></button>
-                <button id="modify-button" onClick={() => (isEdit = true)}><img src= {pen} id='pen-icon' alt='pen icon'/></button> */}
-                </>
-                ): (<>
-                <input className="no-outline" value={task.task} disabled></input>
-                <button id="delete-button"  onClick={() => deleteData(task.id)}><img src= {trash} id='trash-icon' alt='trash icon'/></button>
-                <button id="modify-button" onClick={() => editData(task.id)}><img src= {pen} id='pen-icon' alt='pen icon'/></button>
-                </>)}
+                    
+                    {isEdit && editID === task.id ? (<>
+                        <input name="edit" id= "edit" key={task.task} defaultValue={task.task} onChange={handleChange}></input>
+                        <button onClick={(e) => updateData(task.id)}>SAVE</button>
+                    </>
+                    ): (<>
+                    <input className="no-outline" value={task.task} disabled></input>
+                    <button id="delete-button"  onClick={() => deleteData(task.id)}><img src= {trash} id='trash-icon' alt='trash icon'/></button>
+                    <button id="modify-button" onClick={() => editData(task.id)}><img src= {pen} id='pen-icon' alt='pen icon'/></button>
+                    </>)}
                 </li>  
-                )
-            
-             )
-            }
-             </ul>
-
+              )
+            )}
+            </ul>
         </>
-    
   )
 }
 
