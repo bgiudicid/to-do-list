@@ -4,11 +4,11 @@ With a simple click we can read, add, amend and delete them.
 
 ## :iphone:Mobile Graphic reference
 ​
-![Mobile](https://imgur.com/a/SUIzqmN)
+![Mobile](https://imgur.com/a/68elTfE)
 ​
 ## :desktop_computer:Desktop Graphic reference
 ​
-![Desktop](https://imgur.com/a/kHYWJWa)
+![Desktop](https://imgur.com/a/hSJ9xWO)
 ​
 ## :hammer_and_wrench:Tools 
 - Figma
